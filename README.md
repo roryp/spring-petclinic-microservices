@@ -190,7 +190,7 @@ Download [Application Insights JAR](https://docs.microsoft.com/en-us/azure/azure
     # // Get Application Insights JAR
     mkdir apm
     cd apm
-    wget https://github.com/microsoft/ApplicationInsights-Java/releases/download/3.0.0-PREVIEW.4/applicationinsights-agent-3.0.0-PREVIEW.4.jar
+    wget https://github.com/microsoft/ApplicationInsights-Java/releases/download/3.0.0-PREVIEW.5/applicationinsights-agent-3.0.0-PREVIEW.5.jar
     
     # // Get New Relic JAR
     curl -O https://download.newrelic.com/newrelic/java-agent/newrelic-agent/current/newrelic-java.zip
@@ -333,7 +333,7 @@ Deploy microservice applications to Azure.
 ```bash
     az spring-cloud app deploy --name ${API_GATEWAY} \
         --jar-path ${API_GATEWAY_JAR} \
-        --jvm-options='-Xms2048m -Xmx2048m -Dspring.profiles.active=mysql -javaagent:/persistent/apm/applicationinsights-agent-3.0.0-PREVIEW.4.jar -javaagent:/persistent/apm/newrelic.jar' \
+        --jvm-options='-Xms2048m -Xmx2048m -Dspring.profiles.active=mysql -javaagent:/persistent/apm/applicationinsights-agent-3.0.0-PREVIEW.5.jar -javaagent:/persistent/apm/newrelic.jar' \
         --env APPLICATIONINSIGHTS_CONNECTION_STRING=${APPLICATIONINSIGHTS_CONNECTION_STRING} \
               APPLICATIONINSIGHTS_ROLE_NAME=${API_GATEWAY} \
               NEW_RELIC_LICENSE_KEY=${NEW_RELIC_LICENSE_KEY} \
@@ -341,7 +341,7 @@ Deploy microservice applications to Azure.
     
     az spring-cloud app deploy --name ${ADMIN_SERVER} \
         --jar-path ${ADMIN_SERVER_JAR} \
-        --jvm-options='-Xms2048m -Xmx2048m -Dspring.profiles.active=mysql -javaagent:/persistent/apm/applicationinsights-agent-3.0.0-PREVIEW.4.jar -javaagent:/persistent/apm/newrelic.jar' \
+        --jvm-options='-Xms2048m -Xmx2048m -Dspring.profiles.active=mysql -javaagent:/persistent/apm/applicationinsights-agent-3.0.0-PREVIEW.5.jar -javaagent:/persistent/apm/newrelic.jar' \
         --env APPLICATIONINSIGHTS_CONNECTION_STRING=${APPLICATIONINSIGHTS_CONNECTION_STRING} \
               APPLICATIONINSIGHTS_ROLE_NAME=${ADMIN_SERVER} \
               NEW_RELIC_LICENSE_KEY=${NEW_RELIC_LICENSE_KEY} \
@@ -349,7 +349,7 @@ Deploy microservice applications to Azure.
     
     az spring-cloud app deploy --name ${CUSTOMERS_SERVICE} \
         --jar-path ${CUSTOMERS_SERVICE_JAR} \
-        --jvm-options='-Xms2048m -Xmx2048m -Dspring.profiles.active=mysql -javaagent:/persistent/apm/applicationinsights-agent-3.0.0-PREVIEW.4.jar -javaagent:/persistent/apm/newrelic.jar' \
+        --jvm-options='-Xms2048m -Xmx2048m -Dspring.profiles.active=mysql -javaagent:/persistent/apm/applicationinsights-agent-3.0.0-PREVIEW.5.jar -javaagent:/persistent/apm/newrelic.jar' \
         --env MYSQL_SERVER_FULL_NAME=${MYSQL_SERVER_FULL_NAME} \
               MYSQL_DATABASE_NAME=${MYSQL_DATABASE_NAME} \
               MYSQL_SERVER_ADMIN_LOGIN_NAME=${MYSQL_SERVER_ADMIN_LOGIN_NAME} \
@@ -361,7 +361,7 @@ Deploy microservice applications to Azure.
     
     az spring-cloud app deploy --name ${VETS_SERVICE} \
         --jar-path ${VETS_SERVICE_JAR} \
-        --jvm-options='-Xms2048m -Xmx2048m -Dspring.profiles.active=mysql -javaagent:/persistent/apm/applicationinsights-agent-3.0.0-PREVIEW.4.jar -javaagent:/persistent/apm/newrelic.jar' \
+        --jvm-options='-Xms2048m -Xmx2048m -Dspring.profiles.active=mysql -javaagent:/persistent/apm/applicationinsights-agent-3.0.0-PREVIEW.5.jar -javaagent:/persistent/apm/newrelic.jar' \
         --env MYSQL_SERVER_FULL_NAME=${MYSQL_SERVER_FULL_NAME} \
               MYSQL_DATABASE_NAME=${MYSQL_DATABASE_NAME} \
               MYSQL_SERVER_ADMIN_LOGIN_NAME=${MYSQL_SERVER_ADMIN_LOGIN_NAME} \
@@ -373,7 +373,7 @@ Deploy microservice applications to Azure.
     
     az spring-cloud app deploy --name ${VISITS_SERVICE} \
         --jar-path ${VISITS_SERVICE_JAR} \
-        --jvm-options='-Xms2048m -Xmx2048m -Dspring.profiles.active=mysql -javaagent:/persistent/apm/applicationinsights-agent-3.0.0-PREVIEW.4.jar -javaagent:/persistent/apm/newrelic.jar' \
+        --jvm-options='-Xms2048m -Xmx2048m -Dspring.profiles.active=mysql -javaagent:/persistent/apm/applicationinsights-agent-3.0.0-PREVIEW.5.jar -javaagent:/persistent/apm/newrelic.jar' \
         --env MYSQL_SERVER_FULL_NAME=${MYSQL_SERVER_FULL_NAME} \
               MYSQL_DATABASE_NAME=${MYSQL_DATABASE_NAME} \
               MYSQL_SERVER_ADMIN_LOGIN_NAME=${MYSQL_SERVER_ADMIN_LOGIN_NAME} \
