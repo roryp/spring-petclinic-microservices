@@ -22,3 +22,8 @@ generated/
 
 # Skip APM
 apm/
+
+# factory path
+*factorypath*
+spring-petclinic-api-gateway/.factorypath
+spring-petclinic-vets-service/.factorypath
