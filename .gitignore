@@ -19,3 +19,5 @@ generated/
 
 # Skip scripts
 .scripts/
+.vscode/settings.json
+.factorypath
